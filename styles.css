@@ -1,53 +1,97 @@
 body {
     background-color: #776d8a;
     font-family: 'Merriweather', serif;
+    text-align: center;
 }
 
 h1 {
     font-family: 'Grandstander', cursive;
-    text-align: center;
+    font-size: 3rem;
     margin-top: 2.1rem;
+}
+
+.output, .playerScore, .computerScore {
+    display: inline-block;
+    margin: .5rem 2rem;
+}
+
+.output {
+    margin: auto 1.25rem;
 }
 
 .container {
     display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
 }
 
 img {
-    width: 90%;
-    border-radius: 2rem;
+    width: 80%;
+    border-radius: 3rem;
     margin: 1rem auto;
 }
 
 button {
     flex-grow: 1;
-    margin: 1em;
-    border: 2px solid #dbe3e5;
-    border-radius: 3rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
     background-color: #d3c09a;
     outline: none;
     cursor: pointer;
-    box-shadow: 5px 5px 7px 4px #dbe3e5;
+    box-shadow: 2px 2px 7px 1px #dbe3e5;
+    width: 50%;
+    text-align: center;
 }
 
 button:hover {
     transform: scale(1.1);
 }
 
-@media only screen and (max-width: 500px) {
+.retry-button {
+    padding: 5vw 2vw;
+    width: auto;
+    box-shadow: 2px 2px 7px 1px black;
+}
+
+@media only screen and (max-width: 399px) {
+    .container {
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .retry-button {
+        padding: 10vw 2vw;
+    }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 400px) {
     h1 {
         font-size: 2.5rem;
     }
 
     .container {
-        display: block;
-        width: 75%;
+        width: 100%;
         margin: auto;
         text-align: center;
     }
 
     button {
-        text-align: center;
-        width: 50%;
+        margin: .5em;
+        width: 75%;
+    }
+
+    .retry-button {
+        padding: 8vw 2vw;
+    }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 701px) {
+    button {
+        width: 60%;
     }
 }
